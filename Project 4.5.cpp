@@ -18,9 +18,11 @@ int main()
 
 	srand((unsigned)time(NULL));
 
+	cout << "R = "; cin >> R;
+
 	for (int i = 0; i < 10; i++)
 	{
-		cout << "R = "; cin >> R;
+		
 		cout << "x = "; cin >> x;
 		cout << "y = "; cin >> y;
 		if ((y <= sqrt(2 * x * R - pow(x, 2)) && (y >= 0)) ||
@@ -30,10 +32,10 @@ int main()
 			cout << "no" << endl;
 	}
 	cout << endl << fixed;
-	cout << "---------------------------" << endl;
+	cout << "---------------------------------" << endl;
 	cout << "|" << setw(6) << "x" << "    |"
 		<< setw(7) << "y" << "      |" << endl;
-	cout << "---------------------------" << endl;
+	cout << "---------------------------------" << endl;
 	
 	for (int i = 0; i < 10; i++)
 	{
@@ -44,10 +46,10 @@ int main()
 			(y <= 0 && y >= -R && x <= 0 && x >= -R && y > -1 * pow((x + R), 2) - 2 * y * R))
 
 			cout << setw(9) << setprecision(4) << x << "  |"
-			<< setw(11) << setprecision(4) << y << "  |  " << "yes" << endl;
+			<< setw(11) << setprecision(4) << y << "  |  " << "yes" << " | " << endl;
 		else
 			cout << setw(9) << setprecision(4) << x << "  |"
-			<< setw(11) << setprecision(4) << y << "  |  " << "no" << endl;
+			<< setw(11) << setprecision(4) << y << "  |  " << "no" << "  | " << endl;
 	}
 	return 0;
 }
